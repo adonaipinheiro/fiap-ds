@@ -1,6 +1,7 @@
 import { Meta, StoryFn } from "@storybook/react";
-import { DS_Button, DS_ButtonProps } from ".";
+import { DS_Button } from ".";
 import { FaSignInAlt } from "react-icons/fa";
+import type { DS_ButtonProps } from "./types";
 
 export default {
   title: "Components/Button",

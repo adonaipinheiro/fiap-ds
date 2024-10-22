@@ -1,13 +1,6 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
 import { Container } from "./styles";
 import { ButtonTypo } from "../../typography";
-
-export interface DS_ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
-  leftIcon?: ReactNode;
-  rightIcon?: ReactNode;
-  state: "default" | "outline";
-}
+import type { DS_ButtonProps } from "./types";
 
 export function DS_Button({
   rightIcon,
@@ -18,9 +11,9 @@ export function DS_Button({
 }: DS_ButtonProps) {
   return (
     <Container state={state} {...props}>
-      {leftIcon && leftIcon}
+      {leftIcon && <span data-testid="left-icon">{leftIcon}</span>}
       <ButtonTypo>{children}</ButtonTypo>
-      {rightIcon && rightIcon}
+      {rightIcon && <span data-testid="right-icon">{rightIcon}</span>}
     </Container>
   );
 }
