@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { DS_Colors } from "../DS/colors";
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -24,9 +25,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     :root {
-        --primary: #ED145B;
-        --white: #FFFFFF;
-        --whiteWithOpacity: #FFFFFF40;
-        --black: #000000;
+      --primary: ${DS_Colors.primary[900]};
+      --white: ${DS_Colors.white};
+      --black: ${DS_Colors.black};
     }
 `;
